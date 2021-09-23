@@ -9,7 +9,7 @@ import requests
 import io
 
 client = discord.Client()
-Token = 'Enter Your TOKEN'
+Token = 'ENTER YOUR TOKEN'
 
 @client.event
 async def on_message(message):
@@ -91,16 +91,8 @@ def extract_main_color(img_path, color_num):
     trans_color = cv2_img[0]
     cluster_centers_arr = np.array([i for i in cluster_centers_arr if LA.norm(np.array(i - trans_color), 2) > 50])
     print("extracted colors array:")
-ff    print(cluster_centers_arr)
+    print(cluster_centers_arr)
     return cluster_centers_arr
 
-
-
 img_path = 'image.png'
-
-
-
-
-
-
-client.run(TOKEN)
+client.run('TOKEN')
